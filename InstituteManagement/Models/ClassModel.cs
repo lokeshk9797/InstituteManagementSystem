@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace InstituteManagement.Models
 {
-    public class ClassMasterModel
+    [Table("ClassMaster")]
+    public class ClassModel
     {
         public int Id { get; set; }
+        [Required]
+        [StringLength(255)]
         public String ClassName { get; set; }
     }
 }
