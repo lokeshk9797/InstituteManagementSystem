@@ -174,15 +174,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908160853505_InitialModel.cs" />
-    <Compile Include="Migrations\201908160853505_InitialModel.Designer.cs">
-      <DependentUpon>201908160853505_InitialModel.cs</DependentUpon>
+    <Compile Include="Migrations\201908161128294_AddedClassSubjectsDesignationAddress.cs" />
+    <Compile Include="Migrations\201908161128294_AddedClassSubjectsDesignationAddress.Designer.cs">
+      <DependentUpon>201908161128294_AddedClassSubjectsDesignationAddress.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ClassMasterModel.cs" />
+    <Compile Include="Models\AddressModel.cs" />
+    <Compile Include="Models\ClassModel.cs" />
+    <Compile Include="Models\DesignationModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SubjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -261,8 +264,8 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908160853505_InitialModel.resx">
-      <DependentUpon>201908160853505_InitialModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908161128294_AddedClassSubjectsDesignationAddress.resx">
+      <DependentUpon>201908161128294_AddedClassSubjectsDesignationAddress.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

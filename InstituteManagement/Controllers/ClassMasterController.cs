@@ -12,7 +12,7 @@ namespace InstituteManagement.Controllers
         // GET: ClassMaster
         public ActionResult ShowClass()
         {
-            var obj = new ClassMasterModel() {  ClassName="1st" };
+            var obj = new ClassModel() {  ClassName="1st" };
             //return View(obj);
             return Content("Hello   ");
         }

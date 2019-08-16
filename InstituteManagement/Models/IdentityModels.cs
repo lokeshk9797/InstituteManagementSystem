@@ -20,7 +20,14 @@ namespace InstituteManagement.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<ClassMasterModel> ClassMasterModels { get; set; }
+        public DbSet<ClassModel> ClassMasterModels { get; set; }
+        public DbSet<SubjectModel> SubjectMasterModels { get; set; }
+
+        public DbSet<DesignationModel> DesignationMasters{ get; set; }
+        public DbSet<AddressModel> AddressMasters{ get; set; }
+
+        
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
