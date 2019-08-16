@@ -178,11 +178,24 @@
     <Compile Include="Migrations\201908160853505_InitialModel.Designer.cs">
       <DependentUpon>201908160853505_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908160930224_AddedSubjectModel.cs" />
+    <Compile Include="Migrations\201908160930224_AddedSubjectModel.Designer.cs">
+      <DependentUpon>201908160930224_AddedSubjectModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908160934322_AddedSubjectModel1.cs" />
+    <Compile Include="Migrations\201908160934322_AddedSubjectModel1.Designer.cs">
+      <DependentUpon>201908160934322_AddedSubjectModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908160935200_AddedSubjectModel2.cs" />
+    <Compile Include="Migrations\201908160935200_AddedSubjectModel2.Designer.cs">
+      <DependentUpon>201908160935200_AddedSubjectModel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ClassMasterModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SubjectMasterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -263,6 +276,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201908160853505_InitialModel.resx">
       <DependentUpon>201908160853505_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908160930224_AddedSubjectModel.resx">
+      <DependentUpon>201908160930224_AddedSubjectModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908160934322_AddedSubjectModel1.resx">
+      <DependentUpon>201908160934322_AddedSubjectModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908160935200_AddedSubjectModel2.resx">
+      <DependentUpon>201908160935200_AddedSubjectModel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
