@@ -7,7 +7,7 @@ using System.Web;
 
 namespace InstituteManagement.Models
 {
-    [Table("StudentMaster")]
+    [Table("SubjectMaster")]
     public class SubjectModel
     {
         public int Id { get; set; }

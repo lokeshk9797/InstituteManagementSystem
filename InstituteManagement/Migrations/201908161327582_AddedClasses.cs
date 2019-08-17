@@ -3,34 +3,16 @@ namespace InstituteManagement.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddedClassSubjectsDesignationAddress : DbMigration
+    public partial class AddedClasses : DbMigration
     {
         public override void Up()
         {
-            CreateTable(
-                "dbo.AddressMaster",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Address = c.String(nullable: false),
-                    })
-                .PrimaryKey(t => t.Id);
-            
             CreateTable(
                 "dbo.ClassMaster",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        ClassName = c.String(nullable: false, maxLength: 255),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.DesignationMaster",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Designation = c.String(nullable: false, maxLength: 255),
+                        Class = c.String(nullable: false, maxLength: 255),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -56,15 +38,6 @@ namespace InstituteManagement.Migrations
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId)
                 .Index(t => t.RoleId);
-            
-            CreateTable(
-                "dbo.StudentMaster",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        SubjectName = c.String(nullable: false, maxLength: 255),
-                    })
-                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -128,12 +101,9 @@ namespace InstituteManagement.Migrations
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
-            DropTable("dbo.StudentMaster");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
-            DropTable("dbo.DesignationMaster");
             DropTable("dbo.ClassMaster");
-            DropTable("dbo.AddressMaster");
         }
     }
 }

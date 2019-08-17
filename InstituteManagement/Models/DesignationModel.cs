@@ -13,7 +13,7 @@ namespace InstituteManagement.Models
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(255)]
+        [StringLength(512)]
         public String Designation { get; set; }
     }
 }

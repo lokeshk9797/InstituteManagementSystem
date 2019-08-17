@@ -174,17 +174,45 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908161128294_AddedClassSubjectsDesignationAddress.cs" />
-    <Compile Include="Migrations\201908161128294_AddedClassSubjectsDesignationAddress.Designer.cs">
-      <DependentUpon>201908161128294_AddedClassSubjectsDesignationAddress.cs</DependentUpon>
+    <Compile Include="Migrations\201908161327582_AddedClasses.cs" />
+    <Compile Include="Migrations\201908161327582_AddedClasses.Designer.cs">
+      <DependentUpon>201908161327582_AddedClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908170632484_AddedSubjects.cs" />
+    <Compile Include="Migrations\201908170632484_AddedSubjects.Designer.cs">
+      <DependentUpon>201908170632484_AddedSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908170634069_AddedAddress.cs" />
+    <Compile Include="Migrations\201908170634069_AddedAddress.Designer.cs">
+      <DependentUpon>201908170634069_AddedAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908170638214_AddedContact.cs" />
+    <Compile Include="Migrations\201908170638214_AddedContact.Designer.cs">
+      <DependentUpon>201908170638214_AddedContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908170640121_AddedDesignation.cs" />
+    <Compile Include="Migrations\201908170640121_AddedDesignation.Designer.cs">
+      <DependentUpon>201908170640121_AddedDesignation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908170651171_AddedStudents.cs" />
+    <Compile Include="Migrations\201908170651171_AddedStudents.Designer.cs">
+      <DependentUpon>201908170651171_AddedStudents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908170703179_AddedFees.cs" />
+    <Compile Include="Migrations\201908170703179_AddedFees.Designer.cs">
+      <DependentUpon>201908170703179_AddedFees.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\ClassModel.cs" />
+    <Compile Include="Models\ContactModel.cs" />
     <Compile Include="Models\DesignationModel.cs" />
+    <Compile Include="Models\FeesModel.cs" />
+    <Compile Include="Models\FeesDetailsModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\StudentModel.cs" />
     <Compile Include="Models\SubjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -264,8 +292,26 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908161128294_AddedClassSubjectsDesignationAddress.resx">
-      <DependentUpon>201908161128294_AddedClassSubjectsDesignationAddress.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908161327582_AddedClasses.resx">
+      <DependentUpon>201908161327582_AddedClasses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908170632484_AddedSubjects.resx">
+      <DependentUpon>201908170632484_AddedSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908170634069_AddedAddress.resx">
+      <DependentUpon>201908170634069_AddedAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908170638214_AddedContact.resx">
+      <DependentUpon>201908170638214_AddedContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908170640121_AddedDesignation.resx">
+      <DependentUpon>201908170640121_AddedDesignation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908170651171_AddedStudents.resx">
+      <DependentUpon>201908170651171_AddedStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908170703179_AddedFees.resx">
+      <DependentUpon>201908170703179_AddedFees.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

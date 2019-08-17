@@ -7,13 +7,13 @@ namespace InstituteManagement.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddedClassSubjectsDesignationAddress : IMigrationMetadata
+    public sealed partial class AddedStudents : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedClassSubjectsDesignationAddress));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedStudents));
         
         string IMigrationMetadata.Id
         {
-            get { return "201908161128294_AddedClassSubjectsDesignationAddress"; }
+            get { return "201908170651171_AddedStudents"; }
         }
         
         string IMigrationMetadata.Source

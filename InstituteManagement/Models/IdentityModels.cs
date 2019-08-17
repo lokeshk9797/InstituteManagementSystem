@@ -26,7 +26,13 @@ namespace InstituteManagement.Models
         public DbSet<DesignationModel> DesignationMasters{ get; set; }
         public DbSet<AddressModel> AddressMasters{ get; set; }
 
-        
+        public DbSet<StudentModel> StudentModels{ get; set; }
+
+        public DbSet<ContactModel> ContactModels { get; set; }
+        public DbSet<FeesModel> FeesModels { get; set; }
+
+
+
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
