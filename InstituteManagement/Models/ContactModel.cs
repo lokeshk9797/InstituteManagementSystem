@@ -5,15 +5,15 @@ using System.Web;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
+
 namespace InstituteManagement.Models
 {
-    [Table("ClassMaster")]
-    public class ClassModel
+    [Table("ContactMaster")]
+    public class ContactModel
     {
         public int Id { get; set; }
         [Required]
-        [StringLength(255)]
-        [Column("Class")]
-        public String ClassName { get; set; }
+        public String MobileNumber { get; set; }
+        public String PhoneNumber { get; set; }
     }
 }
