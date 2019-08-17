@@ -15,5 +15,7 @@ namespace InstituteManagement.Models
         [Required]
         [StringLength(512)]
         public String Designation { get; set; }
+        public Int64 Salary { get; set; }
+
     }
 }
