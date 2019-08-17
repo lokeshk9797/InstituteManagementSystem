@@ -31,8 +31,10 @@ namespace InstituteManagement.Models
         public DbSet<ContactModel> ContactModels { get; set; }
         public DbSet<FeesModel> FeesModels { get; set; }
 
-
-
+        public DbSet<StudentSubjectDetailsModel> StudentSubjectDetails { get; set; }
+        public DbSet<StudentFeeDetailsModel> StudentFeeDetailsModel { get; set; }
+        public DbSet<UserMasterModel>  UserMasters { get; set; }
+        public DbSet<ReceivedFeeDetailsModel> ReceivedFeeDetails { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

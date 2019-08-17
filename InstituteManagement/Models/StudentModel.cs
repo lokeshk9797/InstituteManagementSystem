@@ -23,19 +23,20 @@ namespace InstituteManagement.Models
         
         public DateTime DateOfBirth { get; set; }
         public ClassModel Class { get; set; }
-        public ICollection<SubjectModel> Subjects { get; set; }
+        
         public String School { get; set; }
         [Required]
         [StringLength(1)]
         public char gender{ get; set; }
         public AddressModel Address { get; set; }
         public ContactModel Contact { get; set; }
-        public Int64 TotalFees { get; set; }
+        
         public Byte NoOfInstallments { get; set; }
 
         public DateTime DateOfAdmission { get; set; }
         public bool IsActive { get; set; }
         public bool HasPassed { get; set; }
+
         
     }
 }

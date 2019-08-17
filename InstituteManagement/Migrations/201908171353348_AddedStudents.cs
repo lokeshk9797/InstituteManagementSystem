@@ -17,7 +17,6 @@ namespace InstituteManagement.Migrations
                         LasttName = c.String(nullable: false),
                         DateOfBirth = c.DateTime(nullable: false),
                         School = c.String(),
-                        TotalFees = c.Long(nullable: false),
                         NoOfInstallments = c.Byte(nullable: false),
                         DateOfAdmission = c.DateTime(nullable: false),
                         IsActive = c.Boolean(nullable: false),
@@ -34,22 +33,16 @@ namespace InstituteManagement.Migrations
                 .Index(t => t.Class_Id)
                 .Index(t => t.Contact_Id);
             
-            AddColumn("dbo.SubjectMaster", "StudentModel_Id", c => c.Int());
-            CreateIndex("dbo.SubjectMaster", "StudentModel_Id");
-            AddForeignKey("dbo.SubjectMaster", "StudentModel_Id", "dbo.StudentMaster", "Id");
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.SubjectMaster", "StudentModel_Id", "dbo.StudentMaster");
             DropForeignKey("dbo.StudentMaster", "Contact_Id", "dbo.ContactMaster");
             DropForeignKey("dbo.StudentMaster", "Class_Id", "dbo.ClassMaster");
             DropForeignKey("dbo.StudentMaster", "Address_Id", "dbo.AddressMaster");
-            DropIndex("dbo.SubjectMaster", new[] { "StudentModel_Id" });
             DropIndex("dbo.StudentMaster", new[] { "Contact_Id" });
             DropIndex("dbo.StudentMaster", new[] { "Class_Id" });
             DropIndex("dbo.StudentMaster", new[] { "Address_Id" });
-            DropColumn("dbo.SubjectMaster", "StudentModel_Id");
             DropTable("dbo.StudentMaster");
         }
     }

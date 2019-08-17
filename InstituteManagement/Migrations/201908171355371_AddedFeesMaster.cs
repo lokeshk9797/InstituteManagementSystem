@@ -3,7 +3,7 @@ namespace InstituteManagement.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddedFees : DbMigration
+    public partial class AddedFeesMaster : DbMigration
     {
         public override void Up()
         {
