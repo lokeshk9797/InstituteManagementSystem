@@ -172,6 +172,7 @@
     <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -223,6 +224,22 @@
     <Compile Include="Migrations\201908171520171_PopulatingClassMaster.Designer.cs">
       <DependentUpon>201908171520171_PopulatingClassMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908181822585_StudentandClassModelChanged.cs" />
+    <Compile Include="Migrations\201908181822585_StudentandClassModelChanged.Designer.cs">
+      <DependentUpon>201908181822585_StudentandClassModelChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908190554127_studentColumnCorrected.cs" />
+    <Compile Include="Migrations\201908190554127_studentColumnCorrected.Designer.cs">
+      <DependentUpon>201908190554127_studentColumnCorrected.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908190601097_AddedColumnNumberToStudent.cs" />
+    <Compile Include="Migrations\201908190601097_AddedColumnNumberToStudent.Designer.cs">
+      <DependentUpon>201908190601097_AddedColumnNumberToStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908190739042_datetimeChangedinStudent.cs" />
+    <Compile Include="Migrations\201908190739042_datetimeChangedinStudent.Designer.cs">
+      <DependentUpon>201908190739042_datetimeChangedinStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddressModel.cs" />
@@ -240,6 +257,7 @@
     <Compile Include="Models\UserMasterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\NewStudentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -298,6 +316,9 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Class\Index.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Student\StudentRegistration.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -351,6 +372,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908171520171_PopulatingClassMaster.resx">
       <DependentUpon>201908171520171_PopulatingClassMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908181822585_StudentandClassModelChanged.resx">
+      <DependentUpon>201908181822585_StudentandClassModelChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908190554127_studentColumnCorrected.resx">
+      <DependentUpon>201908190554127_studentColumnCorrected.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908190601097_AddedColumnNumberToStudent.resx">
+      <DependentUpon>201908190601097_AddedColumnNumberToStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908190739042_datetimeChangedinStudent.resx">
+      <DependentUpon>201908190739042_datetimeChangedinStudent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
