@@ -240,6 +240,10 @@
     <Compile Include="Migrations\201908190739042_datetimeChangedinStudent.Designer.cs">
       <DependentUpon>201908190739042_datetimeChangedinStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908200918239_ClassIdAddedToModel.cs" />
+    <Compile Include="Migrations\201908200918239_ClassIdAddedToModel.Designer.cs">
+      <DependentUpon>201908200918239_ClassIdAddedToModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddressModel.cs" />
@@ -384,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908190739042_datetimeChangedinStudent.resx">
       <DependentUpon>201908190739042_datetimeChangedinStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908200918239_ClassIdAddedToModel.resx">
+      <DependentUpon>201908200918239_ClassIdAddedToModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

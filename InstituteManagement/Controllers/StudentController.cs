@@ -14,6 +14,9 @@ namespace InstituteManagement.Controllers
     {
         // GET: Student
         private ApplicationDbContext _context;
+
+       
+
         public StudentController()
         {
             _context = new ApplicationDbContext();
@@ -36,9 +39,8 @@ namespace InstituteManagement.Controllers
         [HttpPost]
         public ActionResult Create(StudentModel student)
         {
-            var id= student.Class;
             
-
+            
 
             _context.StudentModels.Add(student);
             _context.SaveChanges();

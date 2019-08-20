@@ -43,6 +43,7 @@ namespace InstituteManagement.Models
         public String School { get; set; }
 
         [Column(Order = 7)]
+        public int Class_Id;
         public ClassModel Class { get; set; }
 
         [Column(Order = 8)]
