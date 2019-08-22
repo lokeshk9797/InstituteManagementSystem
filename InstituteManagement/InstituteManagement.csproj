@@ -169,80 +169,31 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908161327582_AddedClasses.cs" />
-    <Compile Include="Migrations\201908161327582_AddedClasses.Designer.cs">
-      <DependentUpon>201908161327582_AddedClasses.cs</DependentUpon>
+    <Compile Include="Migrations\201908220309229_AddedClasses.cs" />
+    <Compile Include="Migrations\201908220309229_AddedClasses.Designer.cs">
+      <DependentUpon>201908220309229_AddedClasses.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908170632484_AddedSubjects.cs" />
-    <Compile Include="Migrations\201908170632484_AddedSubjects.Designer.cs">
-      <DependentUpon>201908170632484_AddedSubjects.cs</DependentUpon>
+    <Compile Include="Migrations\201908220310420_PopulatingClasses.cs" />
+    <Compile Include="Migrations\201908220310420_PopulatingClasses.Designer.cs">
+      <DependentUpon>201908220310420_PopulatingClasses.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908170634069_AddedAddress.cs" />
-    <Compile Include="Migrations\201908170634069_AddedAddress.Designer.cs">
-      <DependentUpon>201908170634069_AddedAddress.cs</DependentUpon>
+    <Compile Include="Migrations\201908220341206_AddedAddress.cs" />
+    <Compile Include="Migrations\201908220341206_AddedAddress.Designer.cs">
+      <DependentUpon>201908220341206_AddedAddress.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908170638214_AddedContact.cs" />
-    <Compile Include="Migrations\201908170638214_AddedContact.Designer.cs">
-      <DependentUpon>201908170638214_AddedContact.cs</DependentUpon>
+    <Compile Include="Migrations\201908220342262_AddedContact.cs" />
+    <Compile Include="Migrations\201908220342262_AddedContact.Designer.cs">
+      <DependentUpon>201908220342262_AddedContact.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201908170640121_AddedDesignation.cs" />
-    <Compile Include="Migrations\201908170640121_AddedDesignation.Designer.cs">
-      <DependentUpon>201908170640121_AddedDesignation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908171353348_AddedStudents.cs" />
-    <Compile Include="Migrations\201908171353348_AddedStudents.Designer.cs">
-      <DependentUpon>201908171353348_AddedStudents.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908171355371_AddedFeesMaster.cs" />
-    <Compile Include="Migrations\201908171355371_AddedFeesMaster.Designer.cs">
-      <DependentUpon>201908171355371_AddedFeesMaster.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908171407455_AddedStudentSubjectDetail.cs" />
-    <Compile Include="Migrations\201908171407455_AddedStudentSubjectDetail.Designer.cs">
-      <DependentUpon>201908171407455_AddedStudentSubjectDetail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908171418161_AddedStudentFeesDetails.cs" />
-    <Compile Include="Migrations\201908171418161_AddedStudentFeesDetails.Designer.cs">
-      <DependentUpon>201908171418161_AddedStudentFeesDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908171439170_AddedUserMaster_includedSalaryInDesignation.cs" />
-    <Compile Include="Migrations\201908171439170_AddedUserMaster_includedSalaryInDesignation.Designer.cs">
-      <DependentUpon>201908171439170_AddedUserMaster_includedSalaryInDesignation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908171443539_AddedReceivedFeesDetails.cs" />
-    <Compile Include="Migrations\201908171443539_AddedReceivedFeesDetails.Designer.cs">
-      <DependentUpon>201908171443539_AddedReceivedFeesDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908171520171_PopulatingClassMaster.cs" />
-    <Compile Include="Migrations\201908171520171_PopulatingClassMaster.Designer.cs">
-      <DependentUpon>201908171520171_PopulatingClassMaster.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908181822585_StudentandClassModelChanged.cs" />
-    <Compile Include="Migrations\201908181822585_StudentandClassModelChanged.Designer.cs">
-      <DependentUpon>201908181822585_StudentandClassModelChanged.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908190554127_studentColumnCorrected.cs" />
-    <Compile Include="Migrations\201908190554127_studentColumnCorrected.Designer.cs">
-      <DependentUpon>201908190554127_studentColumnCorrected.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908190601097_AddedColumnNumberToStudent.cs" />
-    <Compile Include="Migrations\201908190601097_AddedColumnNumberToStudent.Designer.cs">
-      <DependentUpon>201908190601097_AddedColumnNumberToStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908190739042_datetimeChangedinStudent.cs" />
-    <Compile Include="Migrations\201908190739042_datetimeChangedinStudent.Designer.cs">
-      <DependentUpon>201908190739042_datetimeChangedinStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201908200918239_ClassIdAddedToModel.cs" />
-    <Compile Include="Migrations\201908200918239_ClassIdAddedToModel.Designer.cs">
-      <DependentUpon>201908200918239_ClassIdAddedToModel.cs</DependentUpon>
+    <Compile Include="Migrations\201908220346054_AddedStudent.cs" />
+    <Compile Include="Migrations\201908220346054_AddedStudent.Designer.cs">
+      <DependentUpon>201908220346054_AddedStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -319,9 +270,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Class\Index.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Student\StudentRegistration.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Delete.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Student\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -341,56 +294,20 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201908161327582_AddedClasses.resx">
-      <DependentUpon>201908161327582_AddedClasses.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908220309229_AddedClasses.resx">
+      <DependentUpon>201908220309229_AddedClasses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908170632484_AddedSubjects.resx">
-      <DependentUpon>201908170632484_AddedSubjects.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908220310420_PopulatingClasses.resx">
+      <DependentUpon>201908220310420_PopulatingClasses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908170634069_AddedAddress.resx">
-      <DependentUpon>201908170634069_AddedAddress.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908220341206_AddedAddress.resx">
+      <DependentUpon>201908220341206_AddedAddress.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908170638214_AddedContact.resx">
-      <DependentUpon>201908170638214_AddedContact.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908220342262_AddedContact.resx">
+      <DependentUpon>201908220342262_AddedContact.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908170640121_AddedDesignation.resx">
-      <DependentUpon>201908170640121_AddedDesignation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908171353348_AddedStudents.resx">
-      <DependentUpon>201908171353348_AddedStudents.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908171355371_AddedFeesMaster.resx">
-      <DependentUpon>201908171355371_AddedFeesMaster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908171407455_AddedStudentSubjectDetail.resx">
-      <DependentUpon>201908171407455_AddedStudentSubjectDetail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908171418161_AddedStudentFeesDetails.resx">
-      <DependentUpon>201908171418161_AddedStudentFeesDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908171439170_AddedUserMaster_includedSalaryInDesignation.resx">
-      <DependentUpon>201908171439170_AddedUserMaster_includedSalaryInDesignation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908171443539_AddedReceivedFeesDetails.resx">
-      <DependentUpon>201908171443539_AddedReceivedFeesDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908171520171_PopulatingClassMaster.resx">
-      <DependentUpon>201908171520171_PopulatingClassMaster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908181822585_StudentandClassModelChanged.resx">
-      <DependentUpon>201908181822585_StudentandClassModelChanged.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908190554127_studentColumnCorrected.resx">
-      <DependentUpon>201908190554127_studentColumnCorrected.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908190601097_AddedColumnNumberToStudent.resx">
-      <DependentUpon>201908190601097_AddedColumnNumberToStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908190739042_datetimeChangedinStudent.resx">
-      <DependentUpon>201908190739042_datetimeChangedinStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201908200918239_ClassIdAddedToModel.resx">
-      <DependentUpon>201908200918239_ClassIdAddedToModel.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201908220346054_AddedStudent.resx">
+      <DependentUpon>201908220346054_AddedStudent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
