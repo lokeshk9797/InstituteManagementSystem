@@ -16,5 +16,6 @@ namespace InstituteManagement.Models
         [Column("Class")]
         public String ClassName { get; set; }
         
+
     }
 }
