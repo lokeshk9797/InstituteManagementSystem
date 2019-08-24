@@ -11,8 +11,17 @@ namespace InstituteManagement.Models
     public class StudentFeeDetailsModel
     {
         public int Id { get; set; }
-        public StudentModel Student { get; set; }
-        public FeesModel Fees { get; set; }
+
+        [ForeignKey("Student")]
+        public virtual int Student_Id { get; set; }
+        public virtual StudentModel Student { get; set; }
+
+        [ForeignKey("Fees")]
+        public virtual int Fees_Id { get; set; }
+        public virtual FeesModel Fees { get; set; }
+
+        public Int32 TotalFees { get; set; }
+
         public Int32 RemainingAmount { get; set; }
     }
 }

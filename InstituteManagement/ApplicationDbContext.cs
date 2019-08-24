@@ -15,9 +15,9 @@ namespace InstituteManagement
     {
         public DbSet<ClassModel> ClassMasterModels { get; set; }
 
-        //public DbSet<SubjectModel> SubjectMasterModels { get; set; }
+        public DbSet<CourseModel> CourserModels { get; set; }
 
-        //public DbSet<DesignationModel> DesignationMasters { get; set; }
+        public DbSet<DesignationModel> DesignationMasters { get; set; }
 
         public DbSet<AddressModel> AddressMasters { get; set; }
 
@@ -25,10 +25,12 @@ namespace InstituteManagement
 
         public DbSet<StudentModel> StudentModels { get; set; }
 
-        //public DbSet<FeesModel> FeesModels { get; set; }
+        public DbSet<FeesModel> FeesModels { get; set; }
+
+        public DbSet<UserMasterModel> UserMasters { get; set; }
+
         //public DbSet<StudentSubjectDetailsModel> StudentSubjectDetails { get; set; }
-        //public DbSet<StudentFeeDetailsModel> StudentFeeDetailsModel { get; set; }
-        //public DbSet<UserMasterModel> UserMasters { get; set; }
+        public DbSet<StudentFeeDetailsModel> StudentFeeDetailsModel { get; set; }
         //public DbSet<ReceivedFeeDetailsModel> ReceivedFeeDetails { get; set; }
 
 

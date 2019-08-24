@@ -12,9 +12,9 @@ namespace InstituteManagement.Models
     public class DesignationModel
     {
         public int Id { get; set; }
-        [Required]
-        [StringLength(512)]
+              
         public String Designation { get; set; }
+
         public Int64 Salary { get; set; }
 
     }

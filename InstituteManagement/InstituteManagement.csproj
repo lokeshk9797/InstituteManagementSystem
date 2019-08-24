@@ -169,9 +169,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FeesModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentModelsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -195,11 +197,72 @@
     <Compile Include="Migrations\201908220346054_AddedStudent.Designer.cs">
       <DependentUpon>201908220346054_AddedStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908220655515_AddedSubjects.cs" />
+    <Compile Include="Migrations\201908220655515_AddedSubjects.Designer.cs">
+      <DependentUpon>201908220655515_AddedSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908220722066_PopulatingSubjects.cs" />
+    <Compile Include="Migrations\201908220722066_PopulatingSubjects.Designer.cs">
+      <DependentUpon>201908220722066_PopulatingSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908220854496_ChangedDateFormat.cs" />
+    <Compile Include="Migrations\201908220854496_ChangedDateFormat.Designer.cs">
+      <DependentUpon>201908220854496_ChangedDateFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908220919098_AddedFeesModel.cs" />
+    <Compile Include="Migrations\201908220919098_AddedFeesModel.Designer.cs">
+      <DependentUpon>201908220919098_AddedFeesModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908230626154_AddedDesignation.cs" />
+    <Compile Include="Migrations\201908230626154_AddedDesignation.Designer.cs">
+      <DependentUpon>201908230626154_AddedDesignation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908230629389_AddedUser.cs" />
+    <Compile Include="Migrations\201908230629389_AddedUser.Designer.cs">
+      <DependentUpon>201908230629389_AddedUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908230630287_PopulatingDesignation.cs" />
+    <Compile Include="Migrations\201908230630287_PopulatingDesignation.Designer.cs">
+      <DependentUpon>201908230630287_PopulatingDesignation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908230650093_UserTableShiftDataTypeChanged.cs" />
+    <Compile Include="Migrations\201908230650093_UserTableShiftDataTypeChanged.Designer.cs">
+      <DependentUpon>201908230650093_UserTableShiftDataTypeChanged.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908230711405_AddedStudentFeeDetails.cs" />
+    <Compile Include="Migrations\201908230711405_AddedStudentFeeDetails.Designer.cs">
+      <DependentUpon>201908230711405_AddedStudentFeeDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908230911263_RemovingClassIdFromStudentFeeDetail.cs" />
+    <Compile Include="Migrations\201908230911263_RemovingClassIdFromStudentFeeDetail.Designer.cs">
+      <DependentUpon>201908230911263_RemovingClassIdFromStudentFeeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908231204462_droppingSubjects.cs" />
+    <Compile Include="Migrations\201908231204462_droppingSubjects.Designer.cs">
+      <DependentUpon>201908231204462_droppingSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908231209267_RemovedForeignKeyFromSubjects.cs" />
+    <Compile Include="Migrations\201908231209267_RemovedForeignKeyFromSubjects.Designer.cs">
+      <DependentUpon>201908231209267_RemovedForeignKeyFromSubjects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908231218468_DroppingSubjectMaster.cs" />
+    <Compile Include="Migrations\201908231218468_DroppingSubjectMaster.Designer.cs">
+      <DependentUpon>201908231218468_DroppingSubjectMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908231226390_AddingCourse.cs" />
+    <Compile Include="Migrations\201908231226390_AddingCourse.Designer.cs">
+      <DependentUpon>201908231226390_AddingCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908231230158_AddingCoursetoStudent.cs" />
+    <Compile Include="Migrations\201908231230158_AddingCoursetoStudent.Designer.cs">
+      <DependentUpon>201908231230158_AddingCoursetoStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddressModel.cs" />
     <Compile Include="Models\ClassModel.cs" />
     <Compile Include="Models\ContactModel.cs" />
+    <Compile Include="Models\CourseModel.cs" />
     <Compile Include="Models\DesignationModel.cs" />
     <Compile Include="Models\FeesModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -207,8 +270,6 @@
     <Compile Include="Models\ReceivedFeeDetailsModel.cs" />
     <Compile Include="Models\StudentFeeDetailsModel.cs" />
     <Compile Include="Models\StudentModel.cs" />
-    <Compile Include="Models\StudentSubjectDetailsModel.cs" />
-    <Compile Include="Models\SubjectModel.cs" />
     <Compile Include="Models\UserMasterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -271,11 +332,21 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\Student\Create.cshtml" />
-    <Content Include="Views\Student\Delete.cshtml" />
-    <Content Include="Views\Student\Details.cshtml" />
-    <Content Include="Views\Student\Edit.cshtml" />
-    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\StudentModels\Create.cshtml" />
+    <Content Include="Views\StudentModels\Delete.cshtml" />
+    <Content Include="Views\StudentModels\Details.cshtml" />
+    <Content Include="Views\StudentModels\Edit.cshtml" />
+    <Content Include="Views\StudentModels\Index.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\FeesModels\Create.cshtml" />
+    <Content Include="Views\FeesModels\Delete.cshtml" />
+    <Content Include="Views\FeesModels\Details.cshtml" />
+    <Content Include="Views\FeesModels\Edit.cshtml" />
+    <Content Include="Views\FeesModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,6 +379,51 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908220346054_AddedStudent.resx">
       <DependentUpon>201908220346054_AddedStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908220655515_AddedSubjects.resx">
+      <DependentUpon>201908220655515_AddedSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908220722066_PopulatingSubjects.resx">
+      <DependentUpon>201908220722066_PopulatingSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908220854496_ChangedDateFormat.resx">
+      <DependentUpon>201908220854496_ChangedDateFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908220919098_AddedFeesModel.resx">
+      <DependentUpon>201908220919098_AddedFeesModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908230626154_AddedDesignation.resx">
+      <DependentUpon>201908230626154_AddedDesignation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908230629389_AddedUser.resx">
+      <DependentUpon>201908230629389_AddedUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908230630287_PopulatingDesignation.resx">
+      <DependentUpon>201908230630287_PopulatingDesignation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908230650093_UserTableShiftDataTypeChanged.resx">
+      <DependentUpon>201908230650093_UserTableShiftDataTypeChanged.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908230711405_AddedStudentFeeDetails.resx">
+      <DependentUpon>201908230711405_AddedStudentFeeDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908230911263_RemovingClassIdFromStudentFeeDetail.resx">
+      <DependentUpon>201908230911263_RemovingClassIdFromStudentFeeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908231204462_droppingSubjects.resx">
+      <DependentUpon>201908231204462_droppingSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908231209267_RemovedForeignKeyFromSubjects.resx">
+      <DependentUpon>201908231209267_RemovedForeignKeyFromSubjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908231218468_DroppingSubjectMaster.resx">
+      <DependentUpon>201908231218468_DroppingSubjectMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908231226390_AddingCourse.resx">
+      <DependentUpon>201908231226390_AddingCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908231230158_AddingCoursetoStudent.resx">
+      <DependentUpon>201908231230158_AddingCoursetoStudent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

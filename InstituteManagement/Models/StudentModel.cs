@@ -12,6 +12,7 @@ namespace InstituteManagement.Models
     [Table("StudentMaster")]
     public class StudentModel
     {
+       
         public int Id { get; set; }
 
         [Required]
@@ -25,7 +26,7 @@ namespace InstituteManagement.Models
         [Display(Name ="Last Name")]
         public String LastName { get; set; }
 
-        [Column(TypeName ="datetime2")]
+        [Column(TypeName ="date")]
         [Display(Name ="Date Of Birth")]       
         public DateTime DateOfBirth { get; set; }
 
@@ -43,7 +44,9 @@ namespace InstituteManagement.Models
         public virtual int  Address_Id { get; set; }
         public virtual AddressModel Address { get; set; }
 
-
+        [ForeignKey("Course")]
+        public virtual int Course_Id { get; set; }
+        public virtual CourseModel Course { get; set; }
 
         [ForeignKey("Contact")]
         public virtual int Contact_Id { get; set; }
@@ -54,7 +57,7 @@ namespace InstituteManagement.Models
         public Byte NoOfInstallments { get; set; }
 
         //[Column(Order = 11,TypeName = "datetime2")]
-        [Column( TypeName = "datetime2")]
+        [Column( TypeName = "date")]
         public DateTime DateOfAdmission { get; set; }
 
         
@@ -63,7 +66,10 @@ namespace InstituteManagement.Models
         
         public bool HasPassed { get; set; }
 
-        
-        
+       
+
+
+
+
     }
 }

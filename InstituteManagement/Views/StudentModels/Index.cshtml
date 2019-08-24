@@ -51,6 +51,9 @@
         <th>
             @Html.DisplayNameFor(model => model.HasPassed)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject_Id)
+        </th>
         <th></th>
     </tr>
 
@@ -94,6 +97,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.HasPassed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Subject_Id)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
