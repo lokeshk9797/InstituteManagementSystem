@@ -14,10 +14,12 @@ namespace InstituteManagement.Models
         public String FirstName { get; set; }
         public String MiddleName { get; set; }
         public String LastName { get; set; }
-        public DesignationModel Designation { get; set; }
+        [ForeignKey("Designation")]
+        public virtual int Designation_Id { get; set; }
+        public virtual DesignationModel Designation { get; set; }
         public DateTime JoiningDate { get; set; }
         public bool IsPermanent { get; set; }
         public bool IsActive { get; set; }
-        public Byte Shift { get; set; }
+        public String Shift { get; set; }
     }
 }

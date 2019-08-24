@@ -8,8 +8,6 @@ namespace InstituteManagement.ViewModel
 {
     public class NewStudentViewModel
     {
-        public IEnumerable<ClassModel> ClassModels { get; set; }
-        public ClassModel CLassForStoring { get; set; }
         public StudentModel Student { get; set; }
 
     }
