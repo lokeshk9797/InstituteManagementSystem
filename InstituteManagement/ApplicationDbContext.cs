@@ -29,9 +29,9 @@ namespace InstituteManagement
 
         public DbSet<UserMasterModel> UserMasters { get; set; }
 
-        //public DbSet<StudentSubjectDetailsModel> StudentSubjectDetails { get; set; }
         public DbSet<StudentFeeDetailsModel> StudentFeeDetailsModel { get; set; }
-        //public DbSet<ReceivedFeeDetailsModel> ReceivedFeeDetails { get; set; }
+
+        public DbSet<ReceivedFeeDetailsModel> ReceivedFeeDetails { get; set; }
 
 
         public ApplicationDbContext()
@@ -43,5 +43,6 @@ namespace InstituteManagement
         {
             return new ApplicationDbContext();
         }
+
     }
 }

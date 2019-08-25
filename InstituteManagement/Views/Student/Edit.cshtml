@@ -82,6 +82,14 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.Course_Id, "Course_Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Course_Id", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Course_Id, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(model => model.Contact_Id, "Contact_Id", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("Contact_Id", null, htmlAttributes: new { @class = "form-control" })
@@ -122,14 +130,6 @@
                     @Html.EditorFor(model => model.HasPassed)
                     @Html.ValidationMessageFor(model => model.HasPassed, "", new { @class = "text-danger" })
                 </div>
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Subject_Id, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Subject_Id, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Subject_Id, "", new { @class = "text-danger" })
             </div>
         </div>
 

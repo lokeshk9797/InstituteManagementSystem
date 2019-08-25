@@ -169,10 +169,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ClassController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\FeesModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\StudentModelsController.cs" />
+    <Compile Include="Controllers\ReceivedFeeDetailController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentFeeDetailsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -257,6 +261,14 @@
     <Compile Include="Migrations\201908231230158_AddingCoursetoStudent.Designer.cs">
       <DependentUpon>201908231230158_AddingCoursetoStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908241049103_PopulatingCourses.cs" />
+    <Compile Include="Migrations\201908241049103_PopulatingCourses.Designer.cs">
+      <DependentUpon>201908241049103_PopulatingCourses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201908241933211_AddedReceivedFeesDEtails.cs" />
+    <Compile Include="Migrations\201908241933211_AddedReceivedFeesDEtails.Designer.cs">
+      <DependentUpon>201908241933211_AddedReceivedFeesDEtails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddressModel.cs" />
@@ -273,7 +285,6 @@
     <Compile Include="Models\UserMasterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModel\NewStudentViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -308,8 +319,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -332,11 +341,6 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
-    <Content Include="Views\StudentModels\Create.cshtml" />
-    <Content Include="Views\StudentModels\Delete.cshtml" />
-    <Content Include="Views\StudentModels\Details.cshtml" />
-    <Content Include="Views\StudentModels\Edit.cshtml" />
-    <Content Include="Views\StudentModels\Index.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
     <Content Include="Views\User\Delete.cshtml" />
     <Content Include="Views\User\Details.cshtml" />
@@ -347,9 +351,35 @@
     <Content Include="Views\FeesModels\Details.cshtml" />
     <Content Include="Views\FeesModels\Edit.cshtml" />
     <Content Include="Views\FeesModels\Index.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
+    <Content Include="Views\Student\Delete.cshtml" />
+    <Content Include="Views\Student\Details.cshtml" />
+    <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\StudentFeeDetails\Create.cshtml" />
+    <Content Include="Views\StudentFeeDetails\Delete.cshtml" />
+    <Content Include="Views\StudentFeeDetails\Details.cshtml" />
+    <Content Include="Views\StudentFeeDetails\Edit.cshtml" />
+    <Content Include="Views\StudentFeeDetails\Index.cshtml" />
+    <Content Include="Views\ReceivedFeeDetail\Create.cshtml" />
+    <Content Include="Views\ReceivedFeeDetail\Delete.cshtml" />
+    <Content Include="Views\ReceivedFeeDetail\Details.cshtml" />
+    <Content Include="Views\ReceivedFeeDetail\Edit.cshtml" />
+    <Content Include="Views\ReceivedFeeDetail\Index.cshtml" />
+    <Content Include="Views\Class\Create.cshtml" />
+    <Content Include="Views\Class\Delete.cshtml" />
+    <Content Include="Views\Class\Details.cshtml" />
+    <Content Include="Views\Class\Edit.cshtml" />
+    <Content Include="Views\Class\Index.cshtml" />
+    <Content Include="Views\Course\Create.cshtml" />
+    <Content Include="Views\Course\Delete.cshtml" />
+    <Content Include="Views\Course\Details.cshtml" />
+    <Content Include="Views\Course\Edit.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ViewModel\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -424,6 +454,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908231230158_AddingCoursetoStudent.resx">
       <DependentUpon>201908231230158_AddingCoursetoStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908241049103_PopulatingCourses.resx">
+      <DependentUpon>201908241049103_PopulatingCourses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908241933211_AddedReceivedFeesDEtails.resx">
+      <DependentUpon>201908241933211_AddedReceivedFeesDEtails.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

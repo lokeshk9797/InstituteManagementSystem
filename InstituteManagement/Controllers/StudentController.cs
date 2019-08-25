@@ -11,18 +11,18 @@ using InstituteManagement.Models;
 
 namespace InstituteManagement.Controllers
 {
-    public class StudentModelsController : Controller
+    public class StudentController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: StudentModels
+        // GET: Student
         public ActionResult Index()
         {
-            var studentModels = db.StudentModels.Include(s => s.Address).Include(s => s.Class).Include(s => s.Contact);
+            var studentModels = db.StudentModels.Include(s => s.Address).Include(s => s.Class).Include(s => s.Contact).Include(s => s.Course);
             return View(studentModels.ToList());
         }
 
-        // GET: StudentModels/Details/5
+        // GET: Student/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,47 +37,47 @@ namespace InstituteManagement.Controllers
             return View(studentModel);
         }
 
-        // GET: StudentModels/Create
+        // GET: Student/Create
         public ActionResult Create()
         {
             ViewBag.Address_Id = new SelectList(db.AddressMasters, "Id", "Address");
             ViewBag.Class_Id = new SelectList(db.ClassMasterModels, "Id", "ClassName");
             ViewBag.Contact_Id = new SelectList(db.ContactModels, "Id", "MobileNumber");
+            ViewBag.Course_Id = new SelectList(db.CourserModels, "Id", "CourseName");
             return View();
         }
 
-        // POST: StudentModels/Create
+        // POST: Student/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,FirstName,MiddleName,LastName,DateOfBirth,Gender,School,Class_Id,Address,Contact,NoOfInstallments,DateOfAdmission,IsActive,HasPassed")] StudentModel studentModel)
-
+        public ActionResult Create([Bind(Include = "Id,FirstName,MiddleName,LastName,DateOfBirth,Gender,School,Class_Id,Address,Course_Id,Contact,NoOfInstallments,DateOfAdmission,IsActive,HasPassed")] StudentModel studentModel)
         {
-
             if (ModelState.IsValid)
             {
-                
+                studentModel.IsActive = true;
+                studentModel.HasPassed = false;
                 db.StudentModels.Add(studentModel);
                 db.SaveChanges();
                 StudentFeeDetailsModel studentFeeDetailsModel = new StudentFeeDetailsModel();
                 studentFeeDetailsModel.Student = studentModel;
                 studentFeeDetailsModel.Fees = db.FeesModels.Include(s => s.Class).Where(s => s.Class_Id == studentModel.Class_Id).FirstOrDefault();
-                studentFeeDetailsModel.TotalFees = db.FeesModels.Include(s=>s.Class).Where(s => s.Class_Id == studentModel.Class_Id).Select(s => s.TotalFees).FirstOrDefault();
+                studentFeeDetailsModel.TotalFees = db.FeesModels.Include(s => s.Class).Where(s => s.Class_Id == studentModel.Class_Id).Select(s => s.TotalFees).FirstOrDefault();
                 db.StudentFeeDetailsModel.Add(studentFeeDetailsModel);
                 db.SaveChanges();
-
                 return RedirectToAction("Index");
             }
+
             ViewBag.Address_Id = new SelectList(db.AddressMasters, "Id", "Address", studentModel.Address_Id);
             ViewBag.Class_Id = new SelectList(db.ClassMasterModels, "Id", "ClassName", studentModel.Class_Id);
             ViewBag.Contact_Id = new SelectList(db.ContactModels, "Id", "MobileNumber", studentModel.Contact_Id);
-            //ViewBag.Subject_Id = new SelectList(db.SubjectMasterModels, "Id", "SubjectName",studentModel.Subject_Id);
+            ViewBag.Course_Id = new SelectList(db.CourserModels, "Id", "CourseName", studentModel.Course_Id);
             return View(studentModel);
         }
-         
-            // GET: StudentModels/Edit/5
-            public ActionResult Edit(int? id)
+
+        // GET: Student/Edit/5
+        public ActionResult Edit(int? id)
         {
             if (id == null)
             {
@@ -91,15 +91,16 @@ namespace InstituteManagement.Controllers
             ViewBag.Address_Id = new SelectList(db.AddressMasters, "Id", "Address", studentModel.Address_Id);
             ViewBag.Class_Id = new SelectList(db.ClassMasterModels, "Id", "ClassName", studentModel.Class_Id);
             ViewBag.Contact_Id = new SelectList(db.ContactModels, "Id", "MobileNumber", studentModel.Contact_Id);
+            ViewBag.Course_Id = new SelectList(db.CourserModels, "Id", "CourseName", studentModel.Course_Id);
             return View(studentModel);
         }
 
-        // POST: StudentModels/Edit/5
+        // POST: Student/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,FirstName,MiddleName,LastName,DateOfBirth,Gender,School,Class_Id,Address_Id,Contact_Id,NoOfInstallments,DateOfAdmission,IsActive,HasPassed,Subject_Id")] StudentModel studentModel)
+        public ActionResult Edit([Bind(Include = "Id,FirstName,MiddleName,LastName,DateOfBirth,Gender,School,Class_Id,Address_Id,Course_Id,Contact_Id,NoOfInstallments,DateOfAdmission,IsActive,HasPassed")] StudentModel studentModel)
         {
             if (ModelState.IsValid)
             {
@@ -110,10 +111,11 @@ namespace InstituteManagement.Controllers
             ViewBag.Address_Id = new SelectList(db.AddressMasters, "Id", "Address", studentModel.Address_Id);
             ViewBag.Class_Id = new SelectList(db.ClassMasterModels, "Id", "ClassName", studentModel.Class_Id);
             ViewBag.Contact_Id = new SelectList(db.ContactModels, "Id", "MobileNumber", studentModel.Contact_Id);
+            ViewBag.Course_Id = new SelectList(db.CourserModels, "Id", "CourseName", studentModel.Course_Id);
             return View(studentModel);
         }
 
-        // GET: StudentModels/Delete/5
+        // GET: Student/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -128,17 +130,20 @@ namespace InstituteManagement.Controllers
             return View(studentModel);
         }
 
-        // POST: StudentModels/Delete/5
+        // POST: Student/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+           
             StudentModel studentModel = db.StudentModels.Find(id);
             AddressModel addressModel = db.AddressMasters.Find(studentModel.Address_Id);
             ContactModel contactModel = db.ContactModels.Find(studentModel.Contact_Id);
+            StudentFeeDetailsModel studentFeeDetailsModel = db.StudentFeeDetailsModel.Where(s => s.Student_Id == studentModel.Id).FirstOrDefault();
             db.StudentModels.Remove(studentModel);
             db.ContactModels.Remove(contactModel);
             db.AddressMasters.Remove(addressModel);
+            db.StudentFeeDetailsModel.Remove(studentFeeDetailsModel);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

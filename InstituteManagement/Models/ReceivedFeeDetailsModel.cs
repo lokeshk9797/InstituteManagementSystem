@@ -11,7 +11,8 @@ namespace InstituteManagement.Models
     public class ReceivedFeeDetailsModel
     {
         public int Id { get; set; }
-        public StudentModel Student { get; set; }
+        [ForeignKey("StudentFeeDetails")]
+        public int StudentFee_Id { get; set; }
         public StudentFeeDetailsModel StudentFeeDetails { get; set; }
         public Int32 AmountReceived { get; set; }
         public DateTime PaymentDate { get; set; }

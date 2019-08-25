@@ -5,91 +5,152 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+<h2> Register New User</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>UserMasterModel</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
-            </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.MiddleName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger" })
+                    </div>
+                </td>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Designation_Id, "Designation_Id", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("Designation_Id", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.Designation_Id, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MiddleName, htmlAttributes: new { @class = "control-label col-md-2" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.JoiningDate, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <p><input type="date" name="JoiningDate" class="form-control"/></p>
-                @Html.ValidationMessageFor(model => model.JoiningDate, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.MiddleName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MiddleName, "", new { @class = "text-danger" })
+                    </div>
+                </td>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.IsPermanent, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.IsPermanent)
-                    @Html.ValidationMessageFor(model => model.IsPermanent, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.LastName, htmlAttributes: new { @class = "control-label col-md-2" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                <div class="checkbox">
-                    @Html.EditorFor(model => model.IsActive)
-                    @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
-                </div>
-            </div>
-        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger" })
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Designation_Id, "Designation_Id", htmlAttributes: new { @class = "control-label col-md-2" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Shift, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-               <span>Morning  </span> @Html.RadioButtonFor(model => model.Shift, "Morning", new { htmlAttributes = new { @class = "form-control" } })
-               <span>Afternoon</span> @Html.RadioButtonFor(model => model.Shift, "Afternoon", new { htmlAttributes = new { @class = "form-control" } })
-               <span>Evening  </span> @Html.RadioButtonFor(model => model.Shift, "Evening", new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Shift, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        @Html.DropDownList("Designation_Id", null, htmlAttributes: new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Designation_Id, "", new { @class = "text-danger" })
+                    </div>
+                </td>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.JoiningDate, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        <p><input type="date" name="JoiningDate" class="form-control" /></p>
+                        @Html.ValidationMessageFor(model => model.JoiningDate, "", new { @class = "text-danger" })
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Shift, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-12">
+                        <span>Morning  </span> @Html.RadioButtonFor(model => model.Shift, "Morning", new { htmlAttributes = new { @class = "form-control" } })
+                        <span>Afternoon</span> @Html.RadioButtonFor(model => model.Shift, "Afternoon", new { htmlAttributes = new { @class = "form-control" } })
+                        <span>Evening  </span> @Html.RadioButtonFor(model => model.Shift, "Evening", new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Shift, "", new { @class = "text-danger" })
+                    </div>
+                </td>
+
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IsPermanent, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.IsPermanent)
+                            @Html.ValidationMessageFor(model => model.IsPermanent, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+
+                <td>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.IsActive, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                    </div>
+                </td>
+                <td>
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.IsActive)
+                            @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+
+                <td>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Register User" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+                <td></td>
+
+            </tr>
+        </table>
+
+
     </div>
 }
 
