@@ -1,0 +1,51 @@
+﻿@model InstituteManagement.Models.StudentFeeDetailsModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StudentFeeDetailsModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fees.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fees.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalFees)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalFees)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RemainingAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RemainingAmount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
